@@ -1,0 +1,548 @@
+/*
+  Written by: Werner Johansson
+        date: 2009-09-25
+     webpage: localhost:8080/JSPproject
+*/
+
+/********************************************************************
+  Erik A. Meyers reset css - http://meyerweb.com/eric/tools/css/reset/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of Erik A. Meyers reset css, Thanks for sharing :)
+***********************************************************************/
+
+/* My own CSS */
+/* * * * * * General CSS * * * * * */
+body { /* Just gives me a grey background */
+	background:							#222;
+	font-family:						Serif;
+	font-size:							14px; /* To compensate for stupid browsers */
+	line-height:						1.1em;
+	font-weight:						none;
+	font-style:							none;
+	font-family:						monospace;
+	color:									#FFB
+}
+
+div#wrapper { /*Contains the whole site */
+	width:									800px;
+	margin:									0px auto 5px auto;
+	background-color:				#222;
+}
+
+div#error {
+	display:								block;
+	margin:									80px auto 10px auto;
+}
+div#error_message {
+	width:									400px;
+	margin:									-40px auto 30px auto;
+	border:									3px outset #fe5027;
+	background:							#ff3020;
+}
+div#error_message h3 {
+	font:										bold 1.1em/1.3em monospace;
+	margin:									2px 5px 2px 5px;
+	border-bottom:					1px solid #333;
+}
+div#error_message p {
+	font:										.95em/1.1em monospace;
+	margin:									3px 5px;
+}
+
+/***************************************************************************/
+
+div#header {
+	height:									80px;
+	background:							url(graphics/header_800x80.jpg);
+	margin:									0px 0px 0px 0px;
+	width:									800px;
+}
+div#header div#header_banner {
+	height:									50px;
+	min-height:							50px;
+	max-height:							50px;
+	width:									800px;
+}
+div#header div#header_menu {
+	height:									21px;
+	min-height:							21px;
+	max-height:							21px;
+	width:									800px;
+	text-align:							center;
+	color:									#FF9;
+}
+div#header div#header_menu ul {
+	display:								inline;
+	color:									#FF9;
+}
+div#header div#header_menu ul li {
+	display:								inline;
+	margin:									0px 7px 0px 7px;
+	color:									#FF9;
+}
+div#header div#header_menu ul li a {
+	line-height:						25px;
+	vertical-align:					bottom;
+	text-decoration:				none;
+	color:									#FF9;
+}
+div#header div#header_menu form {
+	display:								inline;
+}
+
+/***************************************************************************/
+
+div#main {
+	width:									100%;
+	overflow:								hidden;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#main ol {
+	margin:									15px auto 0px auto;
+	width:									500px;
+	display:								block;
+	list-style:							disc;
+}
+div#main ol li {
+	list-style:							disc;
+}
+div#main div#register_box {
+	width:									400px;
+	display:								block;
+	margin:									30px auto 50px auto
+}
+div#main div#register_box form {
+	background:							#3D4230;
+	border:									2px outset #3D4230;
+	padding:								5px;
+}
+div#main div#register_box form fieldset{
+	padding:								15px;
+}
+div#main div#register_box form fieldset label {
+	width:									125px;
+	display:								block;
+	text-align:							right;
+	float:									left;
+	line-height:						25px;
+	vertical-align:					bottom;
+}
+div#main div#register_box form fieldset input {
+	display:								block;
+	text-align:							left;
+}
+div#main div#register_box form fieldset legend{
+	font:										0.8em/0.8em normal italic serif;
+	font-style:							italic;
+	padding:								0px 2px 0px 2px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#main div#login_box form {
+	width:									400px;
+	display:								block;
+	margin:									50px auto 50px auto;
+	background:							#3D4230;
+	border:									2px outset #3D4230;
+	padding:								5px;
+}
+div#main div#login_box form fieldset{
+	padding:								15px;
+}
+div#main div#login_box form fieldset label {
+	width:									125px;
+	display:								block;
+	text-align:							right;
+	float:									left;
+	font:										normal 1.0/1.5em normal serif;
+	clear:									left;
+	margin:									5px 0px 0px 0px;
+}
+div#main div#login_box form fieldset input {
+	display:								block;
+	text-align:							left;
+	margin:									3px 0px 0px 0px;
+}
+div#main div#login_box form fieldset legend{
+	font:										0.8em/0.8em normal italic serif;
+	font-style:							italic;
+	padding:								0px 2px 0px 2px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#main form#comment {
+	width:									550px;
+	margin:									10px auto 10px auto;
+	background:							#3D4230;
+	border:									2px outset #3D4230;
+	padding:								5px;
+}
+div#main form#comment fieldset {
+	padding:								5px;
+}
+div#main form#comment fieldset legend {
+	font:										italic 0.8em/0.8em serif;
+	padding:								0px 2px 0px 2px;
+}
+div#main form#comment fieldset label {
+	width:									100px;
+	display:								block;
+	text-align:							right;
+	float:									left;
+	line-height:						25px;
+	clear:									left;
+	margin:									2px 0px 0px 0px;
+}
+div#main form#comment fieldset input {
+	display:								block;
+	text-align:							left;
+	clear:									right;
+	line-height:						25px;
+	margin:									2px;
+}
+div#main form#comment fieldset input.rightedge {
+	display:								block;
+	text-align:							left;
+	float:									right;
+	clear:									right;
+	margin:									0px 20px 0px 0px;
+}
+div#main form#comment fieldset textarea {
+	width:									99%;
+	margin:									0px auto 0px auto;
+	height:									200px;
+}
+
+div#search {
+	display:								block;
+	width:									400px;
+	margin:									50px auto 50px auto;
+	background:							#3D4230;
+	border:									2px outset #3D4230;
+}
+div#search p {
+	color:									#FFB;
+	margin:									3px;
+}
+div#search a {
+	text-decoration:				none;
+	color:									#FFB;
+	font:										bold 1.2em/1.4em bold;
+	display:								block;
+	margin:									3px auto 3px auto;
+	text-align:							center;
+	width:									400px;
+}
+
+
+/***************************************************************************/
+
+div#menu {
+	width:									250px;
+	color:									#222;
+	float:									left;
+	display:								block;
+	margin:									5px 5px 5px 5px;
+}
+
+div#menu ul {
+	margin:									5px 0px 5px 0px;
+}
+div#menu ul li {
+	background:							url(graphics/menu_250x20.jpg);
+	font-family:						monospace;
+	font-size:							13px;
+	line-height:						20px;
+	height:									20px;
+	min-height: 						20px;
+	max-height: 						20px;
+}
+div#menu ul li.menu_top {
+	font-family:						monospace;
+	font-size:							13px;
+	line-height:						20px;
+	height:									20px;
+	min-height: 						20px;
+	max-height: 						20px;
+	text-align:							center;
+}
+div#menu ul li.menu_bottom {
+	background:							url(graphics/menub_250x3.jpg);
+	height:									3px;
+	min-height: 						3px;
+	max-height: 						3px;
+	text-align:							center;
+}
+div#menu ul li a {
+	text-decoration:				none;
+	text-indent:						5px;
+	display:								block;
+	color:									#FF9;
+}
+/***************************************************************************/
+div#info {
+	width:									530px;
+	display:								block;
+	float:									left;
+	margin:									10px auto 10px 5px;
+}
+div#info div#info_blog {
+	background:							url(graphics/blog_text_530x2.png);
+}
+div#info div#info_blog div.blog_head {
+	height:									35px;
+	min-height:							35px;
+	max-height: 						35px;
+	display:								block;
+	background:							url(graphics/blog_header_530x42.png);
+	padding:								7px 6px 0px 6px;
+}
+div#info div#info_blog div.blog_head h2 {
+	text-indent:						10px;
+}
+div#info div#info_blog div.blog_head span {
+	font:										italic 0.8em/1.0em normal serif;
+}
+div#info div#info_blog div.blog_head span.info_action {
+	font:										normal 0.9em/1.1em normal serif;
+	float:									right;
+}
+div#info div#info_blog div.blog_head span.info_action a {
+	color:									#FFB;
+	text-decoration:				none;
+}
+div#info div#info_blog div.text {
+	margin:									5px auto 5px auto;
+	display:								block;
+	width:									510px;
+}
+div#info div#info_blog div.authour {
+	display:								block;
+	width:									530px;
+	height:									22px;
+	min-height: 						22px;
+	max-height:							22px;
+	background:							url(graphics/blog_footer_530x25.png);
+	padding:								3px 0px 0px 0px;
+}
+div#info div#info_blog div.authour span {
+	margin:									0px 15px 0px 0px;
+	font:										normal 0.8em/1.0em normal serif;
+	text-align:							right;
+	display:								block;
+}
+div#info div#info_blog div.authour span a {
+	font:										normal 1.1em/1.4em normal serif;
+	text-decoration:				none;
+	color:									#FFB
+}
+/*--------------------------------------------------------------------------*/
+div#info div.comment {
+	background:							url(graphics/blog_text_530x2.png);
+	width:									100%;
+	margin:									5px 0px 5px 0px;
+}
+div#info div.comment div.comment_head {
+	height:									35px;
+	min-height:							35px;
+	max-height: 						35px;
+	display:								block;
+	padding:								7px 15px 0px 5px;
+	background:							url(graphics/blog_header_530x42.png);
+}
+div#info div.comment div.comment_head h2 {
+	text-indent:						10px;
+}
+div#info div.comment div.comment_head span.time {
+	font:										italic 0.8em/1.0em normal serif;
+}
+div#info div.comment div.comment_head span.authour {
+	font:										normal 0.9em/1.1em normal serif;
+	float:									right;
+}
+div#info div.comment div.comment_head div.text{
+	color:									#FFB;
+	text-decoration:				none;
+}
+div#info div.comment div.text {
+	margin:									5px auto 0px auto;
+	display:								block;
+	width:									510px;
+}
+div#info div.comment div.bottom_cap {
+	height:									5px;
+	min-height: 						5px;
+	max-height:							5px;
+	margin:									0px 0px 5px 0xp;
+	background:							url(graphics/bottom_cap_530x5.png);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#cb_info {
+	width:									530px;
+	display:								block;
+	margin:									10px auto 10px auto;
+}
+div#cb_info div#info_blog {
+	background:							url(graphics/blog_text_530x2.png);
+}
+div#cb_info div#info_blog div.blog_head {
+	height:									35px;
+	min-height:							35px;
+	max-height: 						35px;
+	display:								block;
+	background:							url(graphics/blog_header_530x42.png);
+	padding:								7px 6px 0px 6px;
+}
+div#cb_info div#info_blog div.blog_head h2 {
+	text-indent:						10px;
+}
+div#cb_info div#info_blog div.blog_head span {
+	font:										italic 0.8em/1.0em normal serif;
+}
+div#cb_info div#info_blog div.blog_head span.info_action {
+	font:										normal 0.9em/1.1em normal serif;
+	float:									right;
+}
+div#cb_info div#info_blog div.blog_head span.info_action a {
+	color:									#FFB;
+	text-decoration:				none;
+}
+div#cb_info div#info_blog div.text {
+	margin:									5px auto 5px auto;
+	display:								block;
+	width:									510px;
+}
+div#cb_info div#info_blog div.authour {
+	display:								block;
+	width:									530px;
+	height:									22px;
+	min-height: 						22px;
+	max-height:							22px;
+	background:							url(graphics/blog_footer_530x25.png);
+	padding:								3px 0px 0px 0px;
+}
+div#cb_info div#info_blog div.authour span {
+	margin:									0px 15px 0px 0px;
+	font:										normal 0.8em/1.0em normal serif;
+	text-align:							right;
+	display:								block;
+}
+div#cb_info div#info_blog div.authour span a {
+	font:										normal 1.1em/1.4em normal serif;
+	text-decoration:				none;
+	color:									#FFB
+}
+/*--------------------------------------------------------------------------*/
+div#cb_info div.comment {
+	background:							url(graphics/blog_text_530x2.png);
+	width:									100%;
+	margin:									5px 0px 5px 0px;
+}
+div#cb_info div.comment div.comment_head {
+	height:									35px;
+	min-height:							35px;
+	max-height: 						35px;
+	display:								block;
+	padding:								7px 15px 0px 5px;
+	background:							url(graphics/blog_header_530x42.png);
+}
+div#cb_info div.comment div.comment_head h2 {
+	text-indent:						10px;
+}
+div#cb_info div.comment div.comment_head span.time {
+	font:										italic 0.8em/1.0em normal serif;
+}
+div#cb_info div.comment div.comment_head span.authour {
+	font:										normal 0.9em/1.1em normal serif;
+	float:									right;
+}
+div#cb_info div.comment div.comment_head div.text{
+	color:									#FFB;
+	text-decoration:				none;
+}
+div#cb_info div.comment div.text {
+	margin:									5px auto 0px auto;
+	display:								block;
+	width:									510px;
+}
+div#cb_info div.comment div.bottom_cap {
+	height:									5px;
+	min-height: 						5px;
+	max-height:							5px;
+	margin:									0px 0px 5px 0xp;
+	background:							url(graphics/bottom_cap_530x5.png);
+}
+
+/***************************************************************************/
+
+div#footer {
+	clear:									both;
+	display:								block;
+	width:									798px;
+	height:									23px;
+	min-height:							23px;
+	max-height:							23px;
+	padding:								1px;
+	background:							url(graphics/bottom_800x25.jpg);
+}
+div#footer span#creation {
+	width:									783px;
+	height:									1.0em;
+	font:										italic 0.8em/1.0em normal Verdana;
+	margin:									6px 15px 5px 5px;
+	display:								block;
+	text-align:							right;
+}
